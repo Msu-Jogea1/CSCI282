@@ -1,0 +1,105 @@
+g2.drawString
+Need to iterate across i and keep j the same
+
+
+package lab4Arrays;
+
+public class ArrayPoly {
+	int m;
+	int n;
+	
+	int[][] aWing;
+	
+	public ArrayPoly(int m, int n)
+	{
+		aWing = new int[this.m][this.n];
+	}
+	
+	public void fill(int a)
+	{
+		for(int i = 0; i <m; i++)
+		{
+			for(int j = 0; j<n; j++)
+			{
+				aWing[i][j] = a;
+			}
+		}
+	}
+	
+	public String rowToString(int n)
+	{
+		String s = "";
+		
+		for(int j = 0; j <n; j++)
+		{
+			s+= String.valueOf(aWing[n][j]);
+		}
+		return s;
+		
+	}
+
+}
+
+
+package lab4Arrays;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+public class ArrayFrame {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String m, n;
+		JFrame frame  = new JFrame("Array Table");
+		frame.setSize(500,200);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+		
+		 m = JOptionPane.showInputDialog("Enter Rows");
+		 n = JOptionPane.showInputDialog("Enter Columns");
+		
+		ArrayComponent component = new ArrayComponent(Integer.parseInt(m), Integer.parseInt(n));
+		
+		
+		
+		
+		
+
+	}
+
+}
+
+
+package lab4Arrays;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+
+import javax.swing.JComponent;
+
+public class ArrayComponent extends JComponent{
+	private int m, n;
+	
+	public ArrayComponent(int m, int n)
+	{
+		this.m= m;
+		this.n = n;
+	}
+	public void paintComponent(Graphics g)
+	{
+		Graphics2D g2 = (Graphics2D) g;
+		ArrayPoly tabular =new ArrayPoly(m,n);
+		
+		tabular.fill(0);
+		
+		g2.drawString()
+		
+		
+		
+		
+		
+		
+	}
+
+}
