@@ -1,0 +1,14 @@
+public class BarChart {
+	private final int SIZE = 5;
+	private int[] barArray = new int[SIZE];
+	private final String ASTERISK = "*";
+	
+	public BarChart(int[] val)
+	{
+		barArray = val;
+	}
+	
+	public void draw(Graphics2D g2)
+	{
+		
+	}
